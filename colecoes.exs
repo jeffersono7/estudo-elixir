@@ -31,5 +31,11 @@ tail # -: [:pie, "Apple"]
 
 # Tuplas
 
+{3.14, :pie, "Apple"} # -> {3.14, :pie, "Apple"}
+
+File.read("path/to/existing/file") # -> {:ok, "...contents..."}
+
+File.read("path/to/unkown/file") # -> {:error, :enoent}
+
 
 
