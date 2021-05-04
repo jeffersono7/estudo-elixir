@@ -37,5 +37,9 @@ File.read("path/to/existing/file") # -> {:ok, "...contents..."}
 
 File.read("path/to/unkown/file") # -> {:error, :enoent}
 
+# Listas de palavras-chave
 
+[foo: "bar", hello: "world"]
+
+[{:foo, "bar"}, {:hello, "world"}] # -> [foo: "bar", hello: "world"]
 
