@@ -43,3 +43,30 @@ File.read("path/to/unkown/file") # -> {:error, :enoent}
 
 [{:foo, "bar"}, {:hello, "world"}] # -> [foo: "bar", hello: "world"]
 
+# Mapas
+
+map = %{:foo => "bar", "hello" => :world}
+
+map[:foo] # -> "bar"
+map["hello"] # -> :world
+
+key = "hello"
+
+%{key => "world"} # -> %{"hello" => "world"}
+
+%{:foo => "bar", :foo => "hello world"} # -> %{foo: "hello world"}
+
+%{foo: "bar", hello: "world"}
+
+%{foo: "bar", hello: "world"} == %{:foo => "bar", :hello => "world"} # -> true
+
+map = %{foo: "bar", hello: "world"}
+map.hello # -> "world"
+
+map = %{foo: "bar", hello: "world"}
+%{map | foo: "baz"} # -> %{foo: "baz", hello: "world"}
+
+map = %{hello: "world"}
+%{map | foo: "baz"} # -> KeyError
+Map.put(map, :foo, "baz") # -> %{foo: "baz", hello: "world"}
+
