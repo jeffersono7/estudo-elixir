@@ -55,3 +55,7 @@ defmodule Greeter do
 end
 # -----
 
+# ExDoc
+
+# Boas práticas
+
